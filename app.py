@@ -4,11 +4,16 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import datetime
 import re
+import matplotlib
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import classification_report
 import numpy as np
+
+# ✅ 设置中文字体，解决图表乱码
+matplotlib.rcParams['font.family'] = 'SimHei'
+matplotlib.rcParams['axes.unicode_minus'] = False
 
 st.set_page_config(page_title="投资情绪 vs 收益分析", layout="wide")
 
